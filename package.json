@@ -1,0 +1,62 @@
+{
+  "name": "@marcosantonocito/middy-cognito-permission",
+  "version": "1.0.0",
+  "description": "Authorization and roles permission management for the Middy framework that works with Amazon Cognito.",
+  "author": {
+    "name": "Marco Santonocito",
+    "email": "hello@marcosantonocito.com",
+    "url": "https://marcosantonocito.com"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "engineStrict": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Lambda",
+    "Middleware",
+    "Serverless",
+    "Framework",
+    "AWS",
+    "AWS Lambda",
+    "AWS Cognito",
+    "Middy",
+    "HTTP",
+    "API",
+    "Authorizer",
+    "Role",
+    "Roles",
+    "User Pool",
+    "Permission",
+    "Permissions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santonocito/middy-cognito-permission.git"
+  },
+  "bugs": {
+    "url": "https://github.com/santonocito/middy-cognito-permission/issues"
+  },
+  "homepage": "https://github.com/santonocito/middy-cognito-permission#readme",
+  "peerDependencies": {
+    "@middy/core": ">=1.0.0-alpha"
+  },
+  "dependencies": {
+    "@types/http-errors": "^1.6.1",
+    "http-errors": "^1.7.3",
+    "middy": "^0.36.0"
+  },
+  "devDependencies": {
+    "@middy/core": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
+    "es6-promisify": "^6.0.2",
+    "jest": "^26.1.0",
+    "typescript": "^3.9.5"
+  }
+}
