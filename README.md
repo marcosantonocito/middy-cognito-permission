@@ -1,6 +1,7 @@
 # Serverless Cognito Permission Middleware
 
 [![GitHub version](https://badge.fury.io/gh/santonocito%2Fmiddy-cognito-groups-authorizer.svg)](https://badge.fury.io/gh/santonocito%2Fmiddy-cognito-groups-authorizer)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsantonocito%2Fmiddy-cognito-permission.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsantonocito%2Fmiddy-cognito-permission?ref=badge_shield)
 
 Amazon Cognito user pools enables you to create and manage groups, 
 add users to groups, and remove users from groups. 
