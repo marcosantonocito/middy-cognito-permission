@@ -1,5 +1,4 @@
 # Serverless Cognito Permission Middleware
-===
 
 [![GitHub version](https://badge.fury.io/gh/santonocito%2Fmiddy-cognito-groups-authorizer.svg)](https://badge.fury.io/gh/santonocito%2Fmiddy-cognito-groups-authorizer)
 
