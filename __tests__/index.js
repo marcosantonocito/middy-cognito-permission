@@ -184,4 +184,66 @@ describe('🚫  Middleware Cognito Groups Authorizer', () => {
 
     expect(body).toEqual({ foo: 'bar' })
   })
+
+  test('It should authorize the user if cognito:groups matches with authorized role specified as a string', async () => {
+    const handler = middy((event, context, cb) => {
+      cb(null, event.body) // propagates the body as a response
+    })
+
+    handler.use(cognitoGroupsAuthorizer({
+      allowedRoles: 'Admin'
+    }))
+
+    // invokes the handler
+    const event = {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: {
+        foo: 'bar'
+      },
+      requestContext: {
+        authorizer: {
+          claims: {
+            'cognito:groups': ['Admin']
+          }
+        }
+      }
+    }
+
+    const body = await invoke(handler, event)
+
+    expect(body).toEqual({ foo: 'bar' })
+  })
+
+  test('It should authorize the user if cognito:groups specified as a string matches with authorized role', async () => {
+    const handler = middy((event, context, cb) => {
+      cb(null, event.body) // propagates the body as a response
+    })
+
+    handler.use(cognitoGroupsAuthorizer({
+      allowedRoles: ['Admin']
+    }))
+
+    // invokes the handler
+    const event = {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: {
+        foo: 'bar'
+      },
+      requestContext: {
+        authorizer: {
+          claims: {
+            'cognito:groups': 'Admin'
+          }
+        }
+      }
+    }
+
+    const body = await invoke(handler, event)
+
+    expect(body).toEqual({ foo: 'bar' })
+  })
 })

@@ -29,7 +29,11 @@ module.exports = (opts) => {
         throw new createError.Unauthorized('Unauthorized')
       }
 
-      const userGroups = 'cognito:groups' in authorizer.claims ? authorizer.claims['cognito:groups'] : []
+      let userGroups = 'cognito:groups' in authorizer.claims ? authorizer.claims['cognito:groups'] : []
+
+      if (typeof userGroups === 'string') {
+        userGroups = [userGroups]
+      }
 
       if (userGroups === undefined || userGroups.length === 0) {
         throw new createError.Forbidden('You don\'t have any role associated with your account')

@@ -1,6 +1,6 @@
 {
   "name": "@marcosantonocito/middy-cognito-permission",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Authorization and roles permission management for the Middy framework that works with Amazon Cognito.",
   "author": {
     "name": "Marco Santonocito",
